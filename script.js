@@ -9,6 +9,7 @@ const heading = document.querySelector("#main-heading");
 const description = document.querySelector("#description");
 const toggleBtn = document.querySelector("#toggle");
 const image = document.querySelector("#image");
+const emoji = document.querySelector("#emoji");
 
 
 // Now we can change styles & attributes for those elements
@@ -49,7 +50,22 @@ function toggleMode() {
 
 toggleBtn.addEventListener("click", toggleMode);
 
+// REVIEW
 
+1. // select new element on the page
+const hackerBtn = document.querySelector("#hacker")
+// 2. Attach click event listener to the button
+hackerBtn.addEventListener("click", setHacker);
+// 3. Define the function that triggers when clicked
+function setHacker() {
+    console.log("setting hacker theme...");
+    body.style.background = "rgb(255, 93, 182, 0.82)";
+    body.style.color = "rgb(178, 255, 90)";
+    body.style.fontFamily = "monospace";
+    description.textContent = "YOU HAVE BEEN HACKED"
+    emoji.classList.add("animated");
+
+}
 
 
 
